@@ -1,0 +1,92 @@
+
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    <div class="pace  pace-inactive"><div class="pace-progress" data-progress-text="100%" data-progress="99" style="-webkit-transform: translate3d(100%, 0px, 0px); transform: translate3d(100%, 0px, 0px);">
+            <div class="pace-progress-inner"></div>
+        </div>
+        <div class="pace-activity"></div></div>
+    <!--[if lt IE 9]>
+    <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    <!-- .page-navbar -->
+    <!-- / page-navbar -->
+    <!-- #wrapper -->
+    <div id="wrapper">
+        <!-- .page-sidebar -->
+        <aside id="sidebar" class="page-sidebar sidebar-fixed">
+            <!-- Start .sidebar-inner -->
+            <div class="sidebar-inner">
+                <!-- Start .sidebar-scrollarea -->
+                <div class="slimScrollDiv" style="position: relative; overflow: hidden; width: auto; height: 100%;"><div class="sidebar-scrollarea" style="overflow: hidden; width: auto; height: 100%;">
+                        <!--  .sidebar-panel -->
+                        <div class="sidebar-panel">
+                            <h5 class="sidebar-panel-title">Profile</h5>
+                        </div>
+                        <!-- / .sidebar-panel -->
+                        <div class="user-info clearfix">
+                            <img src="{{ asset('bundles/hdivapp/img/avatars/'~ id ~'.jpg') }}" alt="avatar">
+                            <span class="name">{{ name }}</span>
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-default btn-xs"><i class="l-basic-gear"></i>
+                                </button>
+                                <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">settings <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu right" role="menu" style="margin-left: -24px;">
+                                    <li><a href="#"><i class="fa fa-edit"></i>Edit profile</a>
+                                    </li>
+                                    <li class="divider"></li>
+                                    <li><a href="{{ path('fos_user_security_logout') }}"><i class="fa fa-power-off"></i>Logout</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!--  .sidebar-panel -->
+                        <div class="sidebar-panel">
+                            <h5 class="sidebar-panel-title">Navigation</h5>
+                        </div>
+                        <!-- / .sidebar-panel -->
+                        <!-- .side-nav -->
+                        <div class="side-nav">
+                            <ul class="nav">
+                                <li><a href="{{ path('hdiv_app_homepage') }}" class="active"><i class="l-basic-laptop"></i><span class="txt">Dashboard</span></a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- / side-nav -->
+                    </div><div class="slimScrollBar" style="width: 3px; position: absolute; top: 0px; opacity: 0.4; display: none; border-radius: 7px; z-index: 99; right: 1px; height: 883px; background: rgb(255, 255, 255);"></div><div class="slimScrollRail" style="width: 3px; height: 100%; position: absolute; top: 0px; display: none; border-radius: 7px; opacity: 1; z-index: 90; right: 1px; background: rgb(51, 51, 51);"></div></div>
+                <!-- End .sidebar-scrollarea -->
+            </div>
+            <!-- End .sidebar-inner -->
+        </aside>
+        <!-- / page-sidebar -->
+
+        <!-- .page-content -->
+        <div class="page-content sidebar-page right-sidebar-page clearfix">
+            <!-- .page-content-wrapper -->
+            <div class="page-content-wrapper">
+                <div class="page-content-inner">
+                    <!-- .page-content-inner -->
+                    <div id="page-header" class="clearfix">
+                        <div class="page-header">
+                            <h2>Hello {{ name }}!</h2>
+                        </div>
+                    </div>
+
+
+                 {% block pagecontent %}{% endblock %}
+
+
+                </div>
+                <!-- / .page-content-inner -->
+            </div>
+            <!-- / page-content-wrapper -->
+        </div>
+        <!-- / page-content -->
+    </div>
+
+
+
+
+{% endblock %}

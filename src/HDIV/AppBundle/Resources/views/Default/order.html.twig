@@ -1,0 +1,54 @@
+{% extends 'HDIVAppBundle:Default:index.html.twig' %}
+
+{% block pagecontent %}
+
+    <div class="row">
+    <div class="col-lg-12">
+    <!-- col-lg-12 start here -->
+    <div class="panel panel-default plain toggle panelMove panelClose panelRefresh" id="dyn_0">
+        <!-- Start .panel -->
+        <div class="panel-heading">
+            <h3>Order #{{ order.orderId }}</h3>
+
+            <div class="panel-controls panel-controls-right"><a href="#" class="panel-refresh"><i
+                            class="fa fa-circle-o"></i></a><a href="#" class="toggle panel-minimize"><i
+                            class="fa fa-angle-up"></i></a><a href="#" class="panel-close"><i
+                            class="fa fa-times"></i></a></div>
+        </div>
+        <div class="panel-body">
+
+            <div class="row">
+                <!-- Start .row -->
+                <div class="col-md-4">
+                    <dl class="mt20">
+                        <dt class="text-muted">Order Date</dt>
+                        <dd class="padding-bottom">{{ order.orderDate }}</dd>
+                        <dt class="text-muted">Shipping Address</dt>
+                        <dd class="padding-bottom">{{ order.shippingAddress }}</dd>
+                        <dt class="text-muted">Amount</dt>
+                        <dd class="padding-bottom">{{ order.amount }}</dd>
+                        <dt class="text-muted">User</dt>
+                        <dd class="padding-bottom">{{ order.user }}</dd>
+                    </dl>
+                    <a href="{{ path('hdiv_app_dashboard') }}"><i class="fa fa-arrow-left"></i> Back</a>
+
+                </div>
+                <div class="col-md-8">
+                    <dl class="mt20">
+                        <dt class="text-muted">Company</dt>
+                        <dd class="padding-bottom">j{{ order.company }}</dd>
+                        <dt class="text-muted">Email</dt>
+                        <dd class="padding-bottom">{{ order.email }}</dd>
+                        <dt class="text-muted">Phone</dt>
+                        <dd class="padding-bottom">{{ order.phone }}</dd>
+                        <dt class="text-muted">Bank Account</dt>
+                        <dd class="padding-bottom">{{ order.bankAccount }}</dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- End .row -->
+
+{% endblock %}

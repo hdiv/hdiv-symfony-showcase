@@ -1,0 +1,11 @@
+hdiv_app_homepage:
+    path:     /
+    defaults: { _controller: HDIVAppBundle:Default:index }
+
+hdiv_app_dashboard:
+    path:     /dashboard
+    defaults: { _controller: HDIVAppBundle:Dashboard:index }
+
+hdiv_app_orderdetail:
+    path:     /orderdetail/{orderid}
+    defaults: { _controller: HDIVAppBundle:Dashboard:orderdetail }

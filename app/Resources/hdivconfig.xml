@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hdiv-config>
+
+    <startPages>
+
+        <!--
+         Your entrance to your application
+           -->
+        <startPage>/hdiv-symfony-showcase/web/app_dev.php/</startPage>
+        <startPage>/hdiv-symfony-showcase/web/</startPage>
+        <startPage>/hdiv-symfony-showcase/web/app_dev.php/login</startPage>
+        <startPage>/hdiv-symfony-showcase/web/login</startPage>
+
+        <!--
+          Don't change if you are using wdt and profiler default paths
+           -->
+        <startPage>/hdiv-symfony-showcase/web/app_dev.php/_profiler/.*</startPage>
+        <startPage>/hdiv-symfony-showcase/web/app_dev.php/_wdt/.*</startPage>
+
+    </startPages>
+
+    <maxPagesPerSession>3</maxPagesPerSession>
+
+    <!--
+    HDIV offers a generic validation functionality that makes possible the application of validation
+     rules to all editable data (information that comes from web forms fields such as text and password) sent by the client.
+        -->
+    <editableValidation>True</editableValidation>
+
+    <debugMode>False</debugMode>
+
+    <excludedExtensions>
+        <excludedExtension>.css</excludedExtension>
+        <excludedExtension>.png</excludedExtension>
+        <excludedExtension>.ico</excludedExtension>
+        <excludedExtension>.js</excludedExtension>
+        <excludedExtension>.jpg</excludedExtension>
+    </excludedExtensions>
+
+    <!--
+      Don't change if you are using wdt and profiler default paths
+       -->
+    <excludedPages>
+        <excludedPage>/hdiv-symfony-showcase/web/app_dev.php/_profiler/.*</excludedPage>
+        <excludedPage>/hdiv-symfony-showcase/web/app_dev.php/_wdt/.*</excludedPage>
+    </excludedPages>
+
+</hdiv-config>
+

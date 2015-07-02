@@ -1,0 +1,11 @@
+app/bootstrap*
+
+# Directorios de Symfony
+vendor/*
+*/logs/*
+*/cache/*
+web/uploads/*
+web/bundles/*
+web/css/*
+web/js/*
+.idea/*

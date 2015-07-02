@@ -1,0 +1,66 @@
+{% extends 'HDIVAppBundle:Default:index.html.twig' %}
+
+{% block pagecontent %}
+
+    <div class="row">
+    <div class="col-lg-12">
+    <!-- col-lg-12 start here -->
+    <div class="panel panel-default plain toggle panelMove panelClose panelRefresh" id="dyn_0">
+    <!-- Start .panel -->
+    <div class="panel-heading">
+        <h3>Your orders</h3>
+        <div class="panel-controls panel-controls-right"><a href="#" class="panel-refresh"><i class="fa fa-circle-o"></i></a><a href="#" class="toggle panel-minimize"><i class="fa fa-angle-up"></i></a><a href="#" class="panel-close"><i class="fa fa-times"></i></a></div></div>
+    <div class="panel-body">
+    <div class="slimScrollDiv" style="position: relative; overflow: hidden; width: 100%; height: auto;"><div class="table-responsive" style="overflow: hidden; width: 100%; height: auto;"><div id="basic-datatables_wrapper" class="dataTables_wrapper form-inline"><div class="row"><div class="col-md-6 col-xs-12 "></div><div class="col-md-6 col-xs-12"><div id="basic-datatables_filter" class="dataTables_filter">
+                        <label>
+
+                            {% if not form.vars.valid %}
+                                <div class="alert alert-danger fade in">
+                                    {{ form_errors(form.filterText) }}
+                                </div>
+                            {% endif %}
+
+                            {{ form_start(form) }}
+                            <div class="input-group">
+
+                                {{ form_widget(form.filterText, { 'attr': {'class': 'form-control valid', 'placeholder': 'Filter by company'} }) }}
+
+                                <span class="input-group-btn">
+                                    {{ form_widget(form.filter, { 'attr': {'class': 'btn btn-default'} }) }}
+                                </span>
+                            </div>
+
+                            {{ form_end(form) }}
+
+                        </label>
+
+                    </div></div></div><table id="basic-datatables" class="table table-striped table-bordered dataTable" cellspacing="0" width="100%" role="grid" aria-describedby="basic-datatables_info" style="width: 100%;">
+                    <thead>
+                    <tr role="row"><th class="sorting_asc" tabindex="0" aria-controls="basic-datatables" rowspan="1" colspan="1" aria-sort="ascending">OrderId</th><th class="sorting" tabindex="0" aria-controls="basic-datatables" rowspan="1" colspan="1" >User</th><th class="sorting" tabindex="0" aria-controls="basic-datatables" rowspan="1" colspan="1" style="width: 119px;">Date</th><th class="sorting" tabindex="0" aria-controls="basic-datatables" rowspan="1" colspan="1" >Shipping address</th><th class="sorting" tabindex="0" aria-controls="basic-datatables" rowspan="1" colspan="1" style="width: 110px;">Amount</th><th class="sorting" tabindex="0" aria-controls="basic-datatables" rowspan="1" colspan="1">Company</th><th tabindex="0" aria-controls="basic-datatables" rowspan="1" colspan="1"></th></tr>
+                    </thead>
+                    <tfoot>
+                    <tr><th rowspan="1" colspan="1">OrderId</th><th rowspan="1" colspan="1">User</th><th rowspan="1" colspan="1">Date</th><th rowspan="1" colspan="1">Shipping address</th><th rowspan="1" colspan="1">Amount</th><th rowspan="1" colspan="1">Company</th><th rowspan="1" colspan="1"></th></tr>
+                    </tfoot>
+                    <tbody>
+
+                    {% for order in results %}
+                        <tr role="row">
+                            <td>{{ order.orderId }}</td>
+                            <td>{{ order.user }}</td>
+                            <td>{{ order.orderDate }}</td>
+                            <td>{{ order.shippingAddress }}</td>
+                            <td>{{ order.amount }}</td>
+                            <td>{{ order.company }}</td>
+                            <td><a href="{{ path('hdiv_app_orderdetail', {'orderid': order.orderId }) }}">View details</a></td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table><div class="row"><div class="col-md-4 col-xs-12"><div class="dataTables_info" id="basic-datatables_info" role="status" aria-live="polite">You have {{ results|length  }} orders.</div></div>
+                </div>
+            </div>
+            <!-- End .panel -->
+        </div>
+    </div>
+    <!-- End .row -->
+
+{% endblock %}

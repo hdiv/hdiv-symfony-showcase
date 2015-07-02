@@ -1,0 +1,4 @@
+services:
+#    hdiv_app.example:
+#        class: HDIV\AppBundle\Example
+#        arguments: [@service_id, "plain_value", %parameter%]
