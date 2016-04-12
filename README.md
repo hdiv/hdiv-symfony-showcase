@@ -14,6 +14,21 @@ Symfony and HDIV example application.
 Installation
 --------------
 
+1. Install composer. Composer is the package manager used by modern PHP applications.
+
+Install Composer on Linux and Mac OS X:
+
+```
+$ curl -sS https://getcomposer.org/installer | php
+$ sudo mv composer.phar /usr/local/bin/composer
+```
+
+Install Composer on Windows:
+
+```
+Download the installer from getcomposer.org/download, execute it and follow the instructions.
+```
+2. Navigate to hdiv-symfony-showcase folder and execute:
 ```
 $ composer update
 ```
