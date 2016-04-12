@@ -66,3 +66,7 @@ fos_user:
     db_driver: orm # other valid values are 'mongodb', 'couchdb' and 'propel'
     firewall_name: main
     user_class: HDIV\AppBundle\Entity\User
+
+services:
+    fos_user.doctrine_registry:
+        alias: doctrine
