@@ -45,21 +45,26 @@ class Order
 
 
     /**
-     * @ORM\Column(type="text")
+     * @ORM\Column(type="text", nullable=true)
      */
     protected $bankAccount;
 
 
     /**
-     * @ORM\Column(type="text")
+     * @ORM\Column(type="text", nullable=true)
      */
     protected $email;
 
 
     /**
-     * @ORM\Column(type="text")
+     * @ORM\Column(type="text", nullable=true)
      */
     protected $phone;
+
+    /**
+     * @ORM\Column(type="text", nullable=true)
+     */
+    protected $message;
 
     public function __construct()
     {
@@ -328,5 +333,21 @@ class Order
     public function getBankAccount()
     {
         return $this->bankAccount;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getMessage()
+    {
+        return $this->message;
+    }
+
+    /**
+     * @param mixed $message
+     */
+    public function setMessage($message)
+    {
+        $this->message = $message;
     }
 }

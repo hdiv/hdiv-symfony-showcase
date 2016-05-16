@@ -57,22 +57,4 @@ class DashboardController extends Controller
         return $this->render('HDIVAppBundle:Default:table.html.twig', array('name' => $this->getUser()->getUsername(), 'id' => $this->getUser()->getId(), 'results' => $results, 'form' => $form->createView()));
 
     }
-
-    public function orderDetailAction($orderid)
-    {
-
-        //Connection
-        $em = $this->getDoctrine()->getEntityManager();
-        $connection = $em->getConnection();
-
-        //Get a order by id
-        $query = "SELECT * FROM 'order' WHERE orderId='$orderid'";
-        $statement = $connection->prepare($query);
-        $statement->execute();
-        $results = $statement->fetch();
-
-        return $this->render('HDIVAppBundle:Default:order.html.twig', array('name' => $this->getUser()->getUsername(), 'id' => $this->getUser()->getId(), 'order' => $results));
-
-    }
-
 }

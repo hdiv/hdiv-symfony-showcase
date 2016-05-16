@@ -30,7 +30,8 @@
                         <dt class="text-muted">User</dt>
                         <dd class="padding-bottom">{{ order.user }}</dd>
                     </dl>
-                    <a href="{{ path('hdiv_app_dashboard') }}"><i class="fa fa-arrow-left"></i> Back</a>
+                    <a href="{{ path('hdiv_app_dashboard') }}"><i class="fa fa-arrow-left"></i> Back</a> <a href="{{ path('hdiv_app_orderdelete', {'orderid': order.orderId }) }}"><i class="fa fa-trash"></i> Delete order</a>
+
 
                 </div>
                 <div class="col-md-8">

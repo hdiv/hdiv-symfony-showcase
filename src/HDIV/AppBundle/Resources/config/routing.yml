@@ -7,5 +7,13 @@ hdiv_app_dashboard:
     defaults: { _controller: HDIVAppBundle:Dashboard:index }
 
 hdiv_app_orderdetail:
-    path:     /orderdetail/{orderid}
-    defaults: { _controller: HDIVAppBundle:Dashboard:orderdetail }
+    path:     /order/{orderid}
+    defaults: { _controller: HDIVAppBundle:Order:orderdetail }
+
+hdiv_app_orderdelete:
+    path:     /order/delete/{orderid}
+    defaults: { _controller: HDIVAppBundle:Order:orderdelete }
+
+hdiv_app_new_order:
+    path:     /order/new/
+    defaults: { _controller: HDIVAppBundle:Order:newOrder }
