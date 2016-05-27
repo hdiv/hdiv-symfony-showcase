@@ -3,7 +3,7 @@ hdiv_app_homepage:
     defaults: { _controller: HDIVAppBundle:Default:index }
 
 hdiv_app_dashboard:
-    path:     /dashboard
+    path:     /dashboard/
     defaults: { _controller: HDIVAppBundle:Dashboard:index }
 
 hdiv_app_orderdetail:
