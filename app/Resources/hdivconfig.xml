@@ -8,12 +8,16 @@
            -->
         <startPage>@^/hdiv-symfony-showcase/web/app_dev\.php/$@</startPage>
         <startPage>@^/hdiv-symfony-showcase/web/$@</startPage>
-        
+        <startPage>@^/hdiv-symfony-showcase/web/app_dev\.php/login$@</startPage>
+        <startPage>@^/hdiv-symfony-showcase/web/login$@</startPage>
+
         <!--
           Don't change if you are using wdt and profiler default paths
            -->
         <startPage>@^/hdiv-symfony-showcase/web/app_dev\.php/_profiler/@</startPage>
         <startPage>@^/hdiv-symfony-showcase/web/app_dev\.php/_wdt/@</startPage>
+        <startPage>@^/hdiv-symfony-showcase/web/app_dev\.php/unauthorized$@</startPage>
+        <startPage>@^/hdiv-symfony-showcase/web/unauthorized$@</startPage>
 
     </startPages>
 
@@ -35,6 +39,8 @@
     <excludedPages>
         <excludedPage>@^/hdiv-symfony-showcase/web/app_dev\.php/_profiler/@</excludedPage>
         <excludedPage>@^/hdiv-symfony-showcase/web/app_dev\.php/_wdt/@</excludedPage>
+        <excludedPage>@^/hdiv-symfony-showcase/web/app_dev\.php/unauthorized$@</excludedPage>
+        <excludedPage>@^/hdiv-symfony-showcase/web/unauthorized$@</excludedPage>        
     </excludedPages>
 
     <!--

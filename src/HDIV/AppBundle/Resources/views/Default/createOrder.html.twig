@@ -21,6 +21,7 @@
                         {{ form_errors(form.amount) }}
                         {{ form_errors(form.message) }}
                         {{ form_errors(form.company) }}
+                        {{ form_errors(form.internationalOrder) }}                        
                         {{ form_errors(form.email) }}
                         {{ form_errors(form.phone) }}
                         {{ form_errors(form.bankAccount) }}
@@ -57,6 +58,12 @@
                         {{ form_widget(form.bankAccount, { 'attr': {'class': 'form-control', 'placeholder': 'Bank account...'} }) }}
                     </div><!-- /.col -->
                 </div>
+                 <div class="form-group">
+                    <label class="col-lg-2 control-label">International Order?</label>
+                    <div class="col-lg-10">
+                      {{ form_widget(form.internationalOrder, { 'attr': {'class': 'form-control'} }) }}
+                      </div><!-- /.col -->
+                </div>                
                 <div class="form-group">
                     <label class="col-lg-2 control-label">Phone</label>
                     <div class="col-lg-10">
