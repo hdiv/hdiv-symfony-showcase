@@ -74,6 +74,10 @@ class OrderController extends Controller
             ->add('message', 'textarea', array(
                 'required' => true,
             ))
+            ->add('internationalOrder', 'choice', array(
+                'choices'  => array('y' => 'Yes', 'N' => 'No'),
+                'required' => true,
+            ))               
             ->getForm();
 
         $form->handleRequest($request);
