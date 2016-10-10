@@ -12,7 +12,7 @@ class OrderController extends Controller
     {
 
         //Connection
-        $em = $this->getDoctrine()->getEntityManager();
+        $em = $this->getDoctrine()->getManager();
         $connection = $em->getConnection();
 
         //Get a order by id
@@ -30,7 +30,7 @@ class OrderController extends Controller
     {
 
         //Connection
-        $em = $this->getDoctrine()->getEntityManager();
+        $em = $this->getDoctrine()->getManager();
         $connection = $em->getConnection();
 
         //Get a order by id
@@ -97,7 +97,7 @@ class OrderController extends Controller
             $stringOrderDate = $orderDate->format('Y-m-d H:i:s');
 
             //Connection
-            $em = $this->getDoctrine()->getEntityManager();
+            $em = $this->getDoctrine()->getManager();
             $connection = $em->getConnection();
 
             //Finds a username by id

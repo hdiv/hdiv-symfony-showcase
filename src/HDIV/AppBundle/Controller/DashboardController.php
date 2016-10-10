@@ -11,7 +11,7 @@ class DashboardController extends Controller
     public function indexAction(Request $request)
     {
         //Connection
-        $em = $this->getDoctrine()->getEntityManager();
+        $em = $this->getDoctrine()->getManager();
         $connection = $em->getConnection();
 
         //Gets all orders from a user
