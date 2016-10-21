@@ -21,7 +21,7 @@
 
     </startPages>
 
-    <maxPagesPerSession>3</maxPagesPerSession>
+    <maxPagesPerSession>10</maxPagesPerSession>
 
     <debugMode>False</debugMode>
 
@@ -32,16 +32,6 @@
         <excludedExtension>.js</excludedExtension>
         <excludedExtension>.jpg</excludedExtension>
     </excludedExtensions>
-
-    <!--
-      Don't change if you are using wdt and profiler default paths
-       -->
-    <excludedPages>
-        <excludedPage>@^/hdiv-symfony-showcase/web/app_dev\.php/_profiler/@</excludedPage>
-        <excludedPage>@^/hdiv-symfony-showcase/web/app_dev\.php/_wdt/@</excludedPage>
-        <excludedPage>@^/hdiv-symfony-showcase/web/app_dev\.php/unauthorized$@</excludedPage>
-        <excludedPage>@^/hdiv-symfony-showcase/web/unauthorized$@</excludedPage>        
-    </excludedPages>
 
     <!--
     Editable validations
