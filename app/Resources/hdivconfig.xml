@@ -25,6 +25,8 @@
 
     <debugMode>False</debugMode>
 
+    <randomName>False</randomName>
+
     <excludedExtensions>
         <excludedExtension>.css</excludedExtension>
         <excludedExtension>.png</excludedExtension>
