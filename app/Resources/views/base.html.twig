@@ -32,29 +32,30 @@
     <link rel="icon" href="{{ asset('bundles/hdivapp/img/ico/favicon.ico') }}" type="image/png">
     <!-- Windows8 touch icon ( http://www.buildmypinnedsite.com/ )-->
     <meta name="msapplication-TileColor" content="#3399cc" />
+
+    <script src="{{ asset('bundles/hdivapp/plugins/core/pace/pace.min.js') }}"></script>
+    <!-- Important javascript libs(put in all pages) -->
+    <script src="{{ asset('bundles/hdivapp/js/jquery-2.1.1.min.js') }}"></script>
+    <script>
+        window.jQuery || document.write('<script src="{{ asset('bundles/hdivapp/js/jquery-2.1.1.min.js') }}">\x3C/script>')
+    </script>
+    <script src="{{ asset('bundles/hdivapp/js/jquery-ui.js') }}"></script>
+    <script>
+        window.jQuery || document.write('<script src="{{ asset('bundles/hdivapp/js/libs/jquery-ui-1.10.4.min.js') }}">\x3C/script>')
+    </script>
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="{{ asset('bundles/hdivapp/js/libs/excanvas.min.js') }}"></script>
+    <script type="text/javascript" src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <script type="text/javascript" src="{{ asset('bundles/hdivapp/js/libs/respond.min.js') }}"></script>
+    <![endif]-->
+    <!-- Bootstrap plugins -->
+    <script src="{{ asset('bundles/hdivapp/js/bootstrap/bootstrap.js') }}"></script>
+
 </head>
 <body class=" fixed-header fixed-left-sidebar fixed-right-sidebar pace-done">
 {% block body %}{% endblock %}
 {% block javascripts %}{% endblock %}
 
-
-<script src="{{ asset('bundles/hdivapp/plugins/core/pace/pace.min.js') }}"></script>
-<!-- Important javascript libs(put in all pages) -->
-<script src="{{ asset('bundles/hdivapp/js/jquery-2.1.1.min.js') }}"></script>
-<script>
-    window.jQuery || document.write('<script src="{{ asset('bundles/hdivapp/js/jquery-2.1.1.min.js') }}">\x3C/script>')
-</script>
-<script src="{{ asset('bundles/hdivapp/js/jquery-ui.js') }}"></script>
-<script>
-    window.jQuery || document.write('<script src="{{ asset('bundles/hdivapp/js/libs/jquery-ui-1.10.4.min.js') }}">\x3C/script>')
-</script>
-<!--[if lt IE 9]>
-<script type="text/javascript" src="{{ asset('bundles/hdivapp/js/libs/excanvas.min.js') }}"></script>
-<script type="text/javascript" src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-<script type="text/javascript" src="{{ asset('bundles/hdivapp/js/libs/respond.min.js') }}"></script>
-<![endif]-->
-<!-- Bootstrap plugins -->
-<script src="{{ asset('bundles/hdivapp/js/bootstrap/bootstrap.js') }}"></script>
 <!-- Core plugins ( not remove ) -->
 <script src="{{ asset('bundles/hdivapp/js/libs/modernizr.custom.js') }}"></script>
 <!-- Handle responsive view functions -->

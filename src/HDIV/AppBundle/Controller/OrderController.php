@@ -4,6 +4,7 @@ namespace HDIV\AppBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
 
 class OrderController extends Controller
 {
@@ -40,6 +41,25 @@ class OrderController extends Controller
         $results = $statement->fetch();
 
         return $this->redirectToRoute('hdiv_app_dashboard');
+
+    }
+
+
+    public function getBankAccountOrderAction($orderid)
+    {
+
+       //Connection
+        $em = $this->getDoctrine()->getManager();
+        $connection = $em->getConnection();
+
+        //Get a order by id
+        $query = "SELECT * FROM 'order' WHERE orderId='$orderid'";
+        $statement = $connection->prepare($query);
+        $statement->execute();
+        $results = $statement->fetch();
+        $bankAccount = $results['bankAccount'];
+
+        return new Response($bankAccount);
 
     }
 
@@ -122,12 +142,5 @@ class OrderController extends Controller
 
 
     }
-
-    public function createOrderAction()
-    {
-
-
-    }
-
 
 }

@@ -43,7 +43,9 @@
                         <dt class="text-muted">Phone</dt>
                         <dd class="padding-bottom">{{ order.phone }}</dd>
                         <dt class="text-muted">Bank Account</dt>
-                        <dd class="padding-bottom">{{ order.bankAccount }}</dd>
+                        <dd class="padding-bottom">
+                            <div id="bankAccount"><button id="vbutton" class="btn btn-default">View</button></div>
+                        </dd>
                     </dl>
                 </div>
             </div>
@@ -52,4 +54,14 @@
 
     <!-- End .row -->
 
+    <script>
+    $(document).ready(function() {
+        $("#vbutton").click(function() {
+            $.get("{{ path('hdiv_app_ordergetbankaccount', {'orderid': order.orderId }) }}", function( data ) {
+              $("#bankAccount").html(data);
+              alert( "Loading Bank Account with Ajax..." );
+            });
+        });
+    });
+    </script>
 {% endblock %}

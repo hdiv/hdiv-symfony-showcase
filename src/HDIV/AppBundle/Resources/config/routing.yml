@@ -17,3 +17,7 @@ hdiv_app_orderdelete:
 hdiv_app_new_order:
     path:     /order/new/
     defaults: { _controller: HDIVAppBundle:Order:newOrder }
+
+hdiv_app_ordergetbankaccount:
+    path:     /order/bankAccount/{orderid}
+    defaults: { _controller: HDIVAppBundle:Order:getBankAccountOrder }
