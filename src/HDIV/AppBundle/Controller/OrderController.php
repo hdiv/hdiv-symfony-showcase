@@ -91,6 +91,9 @@ class OrderController extends Controller
             ->add('bankAccount', 'text', array(
                 'required' => true,
             ))
+            ->add('checkbox', 'checkbox', array(
+                'required' => false,
+            ))            
             ->add('message', 'textarea', array(
                 'required' => true,
             ))
