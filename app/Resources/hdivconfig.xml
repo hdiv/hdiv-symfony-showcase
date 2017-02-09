@@ -24,7 +24,7 @@
     </startPages>
 
     <startParameters>
-        <startParameter>param1</startPage>
+        <startParameter>param1</startParameter>
     </startParameters>
 
     <maxPagesPerSession>10</maxPagesPerSession>
