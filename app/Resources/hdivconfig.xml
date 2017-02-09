@@ -23,6 +23,10 @@
 
     </startPages>
 
+    <startParameters>
+        <startParameter>param1</startPage>
+    </startParameters>
+
     <maxPagesPerSession>10</maxPagesPerSession>
 
     <debugMode>False</debugMode>
